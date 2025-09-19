@@ -1,5 +1,10 @@
+import { motion } from "framer-motion";
+
 const NavButton = ({ sectionId, activeSection, onClick, children, label }) => (
-    <div className="relative group">
+    <motion.div whileHover={{ scale: 1.1, borderRadius: 100, boxShadow: "0 4px 12px rgba(0,0,0,0.2)" }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className="relative group">
         <button
             onClick={() => onClick(sectionId)}
             className={`p-3 rounded-full transition-all duration-300 cursor-pointer ${activeSection === sectionId ? 'bg-gray-800 text-white' : 'text-gray-600 hover:bg-gray-200'
@@ -23,7 +28,7 @@ const NavButton = ({ sectionId, activeSection, onClick, children, label }) => (
             {label}
         </span>
 
-    </div>
+    </motion.div>
 );
 
 export default NavButton;

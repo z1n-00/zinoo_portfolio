@@ -4,6 +4,7 @@ const portfolioData = {
     name: "Zin Oo",
     profile,
     tagline: "I build beautiful and functional web applications.",
+    textTypes: ["Back-end Developer", "Full-stack Developer", "Software Engineer"],
     about: {
         title: "About Me",
         description: "I'm a passionate web developer with over 5 years of experience creating dynamic and responsive websites. My expertise lies in front-end technologies like React, Tailwind CSS, and JavaScript, with a strong foundation in back-end development using Node.js and Express. I love solving complex problems and bringing ideas to life through clean, efficient code.",
