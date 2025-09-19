@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 
 const HomeSection = ({ portfolioData }) => (
-    <Section id="home" className="flex flex-col items-center text-center relative">
-        <div className="absolute top-8 right-8 flex">
+    <Section id="home" className="flex flex-col items-center justify-center text-center relative">
+        {/* <div className="absolute top-8 right-8 flex">
             <a
                 href="https://github.com/z1n-00"
                 target="_blank"
@@ -23,7 +23,7 @@ const HomeSection = ({ portfolioData }) => (
             >
                 <img src={linkein} alt="LinkedIn" className="w-6 h-6 md:w-8 md:h-8 rounded-full" />
             </a>
-        </div>
+        </div> */}
 
         <motion.div
             initial={{ scale: 0, opacity: 0 }}
@@ -32,17 +32,15 @@ const HomeSection = ({ portfolioData }) => (
             className="flex justify-center"
         >
             <img
-                src={portfolioData.profile}
-                alt="profile"
-                className="w-35 h-35 p-2 rounded-full mb-4 shadow-sm"
-            />
+                src={portfolioData.ok ?? "https://placehold.co/128x128/a0aec0/ffffff?text=ZO"}
+                alt="Profile" className="w-32 h-32 rounded-full border-4 border-white/50 dark:border-gray-700/50 mb-6 shadow-lg" />
         </motion.div>
 
         <motion.h4
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-2xl md:text-5xl font-bold mb-2"
+            className="text-2xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 dark:from-blue-400 dark:to-teal-300 pb-2"
         >
             {`Hi, I'm ${portfolioData.name}`}
         </motion.h4>
@@ -51,7 +49,7 @@ const HomeSection = ({ portfolioData }) => (
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="text-xl md:text-2xl text-gray-600 font-medium mb-8"
+            className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-medium mb-8"
         >
             {portfolioData.tagline}
         </motion.p>

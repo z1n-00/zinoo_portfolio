@@ -1,9 +1,11 @@
+@config "../tailwind.config.js";
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 @font-face {
-  font-family: "SpaceGrotesk";
-  src: url('./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+    font-family: "SpaceGrotesk";
+    src: url('./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf');
 }
+
 @import "tailwindcss";
 
 html {
@@ -11,7 +13,8 @@ html {
 }
 
 body {
-  font-family: 'SpaceGrotesk', sans-serif; /* Use custom font */
+    font-family: 'SpaceGrotesk', sans-serif;
+    /* Use custom font */
 }
 
 ::-webkit-scrollbar {

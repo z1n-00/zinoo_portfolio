@@ -1,15 +1,11 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: [
-//     './index.html',
-//     './src/**/*.{js,jsx,ts,tsx}',
-//   ],
-//   theme: {
-//     extend: {
-//       fontFamily: {
-//         sans: ['SpaceGrotesk', 'sans-serif'],
-//       },
-//     },
-//   },
-//   plugins: [],
-// }
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    darkMode: 'class', // This is the line you need to add/check
+    content: [
+        "./src/**/*.{js,jsx,ts,tsx}", // Adjust this path to match your project structure
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+}
