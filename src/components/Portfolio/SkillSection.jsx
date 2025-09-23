@@ -9,13 +9,13 @@ const SkillSection = ({ portfolioData }) => (
                 {portfolioData.skills.list.map((brand, index) => (
                     <motion.div
                         key={index}
-                        className="flex items-center justify-center w-30 h-30 p-4 hover:scale-115 duration-300 cursor-pointer"
+                        className="flex items-center justify-center w-25 h-25 p-4 hover:scale-115 duration-300 cursor-pointer"
                         whileHover={{ scale: 1.05 }}
                     >
                         <img
                             src={brand.logo}
                             alt={brand.name}
-                            className="w-20 h-20 object-contain"
+                            className="w-15 h-15 object-contain"
                         />
                     </motion.div>
                 ))}
