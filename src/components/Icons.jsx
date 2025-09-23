@@ -17,9 +17,13 @@ const BookOpenIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a4 4 0 0 0-4-4H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a4 4 0 0 1 4-4h6z" /></svg>
 );
 
-const RocketIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.69-2.22-.19-3.08a2.7 2.7 0 0 0-3.69 0c-.88.85-.9 2.23-.19 3.08z" /><path d="M14.5 9.5c.85.88 2.23.9 3.08.19s1.26-1.5 2-3c.71-.84.69-2.22-.19-3.08a2.7 2.7 0 0 0-3.69 0c-.88.85-.9 2.23-.19 3.08z" /><path d="M10 14l-2.5 2.5a2.41 2.41 0 0 0 0 3.42c.79.79 2.06.79 2.85 0L14 10" /><path d="M18 6l-2.5-2.5a2.41 2.41 0 0 0-3.42 0c-.79.79-.79 2.06 0 2.85L6 18" /><path d="m14 14 2.5 2.5" /><path d="m16.5 10.5 2.5 2.5" /></svg>
+const SkillIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <polyline points="4 17 10 11 4 5" />
+        <line x1="12" y1="19" x2="20" y2="19" />
+    </svg>
 );
+
 const BriefcaseIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
         <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
@@ -56,4 +60,4 @@ const MoonIcon = (props) => (
 const SunIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg>
 );
-export { HomeIcon, UserIcon, BookOpenIcon, BriefcaseIcon, RocketIcon, MailIcon, LinkedinIcon, GithubIcon, MoonIcon, SunIcon };
+export { HomeIcon, UserIcon, BookOpenIcon, BriefcaseIcon, SkillIcon, MailIcon, LinkedinIcon, GithubIcon, MoonIcon, SunIcon };

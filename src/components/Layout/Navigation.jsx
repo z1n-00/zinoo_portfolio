@@ -1,6 +1,6 @@
 import NavCard from "./NavCard";
 import NavButton from "./NavButton";
-import { HomeIcon, UserIcon, BookOpenIcon, BriefcaseIcon, RocketIcon, MailIcon } from "../Icons";
+import { HomeIcon, UserIcon, BookOpenIcon, BriefcaseIcon, SkillIcon, MailIcon } from "../Icons";
 import { motion } from "framer-motion";
 
 const Navigation = ({ activeSection, scrollToSection }) => (
@@ -11,13 +11,13 @@ const Navigation = ({ activeSection, scrollToSection }) => (
             transition={{ duration: 0.8, ease: "easeOut" }}
 
         >
-            <NavCard className="flex md:flex-col md:gap-4 text-black text-white backdrop-blur-xs border dark:border-black/10 ">
+            <NavCard className="flex md:flex-col md:gap-4 text-black text-white backdrop-blur-xs">
                 <NavButton sectionId="home" activeSection={activeSection} onClick={scrollToSection} label="Home"><HomeIcon /></NavButton>
-                <NavButton sectionId="about" activeSection={activeSection} onClick={scrollToSection} label="About"><UserIcon /></NavButton>
+                {/* <NavButton sectionId="about" activeSection={activeSection} onClick={scrollToSection} label="About"><UserIcon /></NavButton> */}
                 <NavButton sectionId="education" activeSection={activeSection} onClick={scrollToSection} label="Education"><BookOpenIcon /></NavButton>
-                {/* <NavButton sectionId="experience" activeSection={activeSection} onClick={scrollToSection} label="Experience"><BriefcaseIcon /></NavButton> */}
-                <NavButton sectionId="projects" activeSection={activeSection} onClick={scrollToSection} label="Projects"><BriefcaseIcon /></NavButton>
-                <NavButton sectionId="skills" activeSection={activeSection} onClick={scrollToSection} label="Skills"><RocketIcon /></NavButton>
+                <NavButton sectionId="experience" activeSection={activeSection} onClick={scrollToSection} label="Experience"><BriefcaseIcon /></NavButton>
+                {/* <NavButton sectionId="projects" activeSection={activeSection} onClick={scrollToSection} label="Projects"><BriefcaseIcon /></NavButton> */}
+                <NavButton sectionId="skills" activeSection={activeSection} onClick={scrollToSection} label="Skills"><SkillIcon /></NavButton>
                 <NavButton sectionId="contact" activeSection={activeSection} onClick={scrollToSection} label="Contact"><MailIcon /></NavButton>
             </NavCard>
         </motion.div>

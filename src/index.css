@@ -8,12 +8,18 @@
 
 @import "tailwindcss";
 
+:root {
+    --color-light: #EEEEF2;
+    --color-white: #FFFFFF;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'SpaceGrotesk', sans-serif;
+    background: #EEEEF2;
     /* Use custom font */
 }
 

@@ -4,9 +4,9 @@ const NavButton = ({ sectionId, activeSection, onClick, children, label }) => (
     <>
         <button
             onClick={() => onClick(sectionId)}
-            className={`rounded-full transition-colors duration-300  cursor-pointer ${activeSection === sectionId ? 'text-blue-500' : 'text-gray-500 dark:text-gray-400 hover:text-blue-500'}`}
+            className={`rounded-full hover:scale-115 duration-300 cursor-pointer ${activeSection === sectionId ? 'text-white dark:text-white dark:border dark:border-white-200/10' : 'text-black dark:text-gray-400 hover:text-gray-500 dark:hover:text-white'}`}
         >
-            <div className={`p-3 rounded-full transition-colors duration-300 ${activeSection === sectionId ? 'bg-blue-500/10' : 'hover:bg-gray-500/10'}`}>
+            <div className={`p-3 rounded-full ${activeSection === sectionId ? 'bg-black dark:bg-gray-500/10' : 'hover:text-black hover:dark:text-gray-500 hover:bg-gray-500/10'}`}>
                 {children}
 
             </div>

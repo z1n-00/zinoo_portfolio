@@ -9,10 +9,11 @@ import ProjectSection from "./components/Portfolio/ProjectSection";
 import SkillSection from "./components/Portfolio/SkillSection";
 import ContactSection from "./components/Portfolio/ContactSection";
 import { MoonIcon, SunIcon } from "./components/Icons";
+import BrandSection from "./components/Portfolio/BrandSection";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState("home");
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -44,14 +45,15 @@ const App = () => {
     <div className={isDarkMode ? 'dark' : ''}>
       <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300">
         <Navigation activeSection={activeSection} scrollToSection={scrollToSection} />
-        <main className="relative z-10">
-          <button onClick={toggleTheme} className="fixed top-6 right-6 w-12 h-12 bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg rounded-full flex items-center justify-center border border-white/20 dark:border-gray-700/30 text-gray-600 dark:text-gray-300 z-50 cursor-pointer">
+        <main className="relative z-10 bg-[#EEEEF2] dark:bg-gray-900 transition-colors duration-300">
+          <button onClick={toggleTheme} className="fixed top-6 right-6 w-12 h-12 bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 z-50 cursor-pointer">
             {isDarkMode ? <SunIcon /> : <MoonIcon />}
           </button>
           <HomeSection portfolioData={portfolioData} />
-          <AboutSection portfolioData={portfolioData} />
+          {/* <AboutSection portfolioData={portfolioData} /> */}
           <EducationSection portfolioData={portfolioData} />
-          {/* <ExperienceSection experienceData={portfolioData.experience} /> */}
+          <ExperienceSection experienceData={portfolioData.experience} />
+          <BrandSection portfolioData={portfolioData} />
           <ProjectSection portfolioData={portfolioData} />
           <SkillSection portfolioData={portfolioData} />
           <ContactSection portfolioData={portfolioData} />

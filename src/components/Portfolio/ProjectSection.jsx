@@ -7,7 +7,7 @@ const ProjectSection = ({ portfolioData }) => (
     <Section id="projects" title={portfolioData.projects.title}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {portfolioData.projects.list.map((project, index) => (
-                <ContentCard key={index} className="flex flex-col items-start text-left">
+                <ContentCard key={index} className="flex flex-col bg-white dark:bg-gray-800 dark:border-0 items-start text-left">
                     <h3 className="text-2xl font-semibold text-gray-800 mb-2">{project.title}</h3>
                     <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
                     <div className="mt-auto pt-4 w-full">
