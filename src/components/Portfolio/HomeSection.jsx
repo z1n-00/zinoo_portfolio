@@ -16,7 +16,7 @@ const HomeSection = ({ portfolioData }) => (
                 >
                     <img
                         src={portfolioData.profile ?? "https://placehold.co/128x128/a0aec0/ffffff?text=ZO"}
-                        alt="Profile" className="w-32 h-32 rounded-full border-4 border-white/50 dark:border-blue-500/10 mb-6" />
+                        alt="Profile" className="w-32 h-32 rounded-full border-2 border-white/50 dark:border-white mb-6" />
                 </motion.div>
 
                 <motion.h4
@@ -52,9 +52,9 @@ const HomeSection = ({ portfolioData }) => (
                     transition={{ delay: 1, duration: 1 }}
                     className="flex justify-center m-0"
                 >
-                    <div className="flex size-10 animate-bounce items-center justify-center rounded-full p-2 ring-2 ring-black dark:ring-blue-500/10 bg-white/30 dark:bg-gray-800/30 dark:bg-blue-500/10 backdrop-blur-lg rounded-3xl z-50 m-0">
+                    <div className="flex size-10 animate-bounce items-center justify-center rounded-full p-2 ring-2 ring-black dark:ring-white bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg rounded-3xl z-50 m-0">
                         <svg
-                            className="size-6 dark:text-blue-500 text-black"
+                            className="size-6 dark:text-white text-black"
                             fill="none"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -67,9 +67,17 @@ const HomeSection = ({ portfolioData }) => (
                     </div>
                 </motion.div>
 
-                <a href={`mailto:${portfolioData.contact.email}`} className="inline-flex dark:text-blue-500 dark:bg-blue-500/10 items-center px-6 py-3 rounded-full text-white font-bold dark:bg-[#101828] bg-black hover:scale-115 duration-30 transition-all duration-300">
-                    <span className="text-xl">CONTACT ME</span>
+                <a
+                    href={`mailto:${portfolioData.contact.email}`}
+                    className="group inline-flex items-center px-6 py-3 rounded-full text-white font-bold bg-black 
+                    dark:border dark:border-white-500/10 dark:bg-gray-800 
+                    dark:hover:outline-white duration-300"
+                >
+                    <span className="text-xl group-hover:hidden">Contact Me</span>
+
+                    <span className="text-xl hidden group-hover:inline">Let’s Talk</span>
                 </a>
+
             </ContentCard>
 
             {/* <div className="grid md:grid-flow-col md:grid-cols-4 grid-cols-2 gap-4">
