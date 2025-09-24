@@ -6,7 +6,7 @@ const Section = ({ id, title, children }) => (
         viewport={{ once: true }}
         transition={{ duration: 0.7 }} id={id} className="md:min-h-screen flex items-center justify-center p-4 md:p-8">
         <div className="container max-w-6xl text-center">
-            <h2 className="text-xl md:text-5xl font-bold mb-8 text-black dark:text-white">{title}</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-800 dark:text-gray-300">{title}</h2>
             {children}
         </div>
     </motion.section>

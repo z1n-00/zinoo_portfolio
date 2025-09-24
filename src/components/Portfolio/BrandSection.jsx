@@ -5,7 +5,7 @@ import ContentCard from "../Layout/ContentCard";
 
 const BrandSection = ({ portfolioData }) => (
     <Section id="brands" title="The Brands I've Worked With" className="bg-white dark:bg-gray-800">
-        <ContentCard className="bg-white dark:bg-gray-800 ">
+        <ContentCard className="bg-white dark:bg-gray-800 my-4">
             <div className="flex flex-wrap justify-center gap-4">
                 {portfolioData.brands.map((brand, index) => (
                     <motion.div

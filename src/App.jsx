@@ -46,7 +46,7 @@ const App = () => {
       <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300">
         <Navigation activeSection={activeSection} scrollToSection={scrollToSection} />
         <main className="relative z-10 bg-[#EEEEF2] dark:bg-gray-900 transition-colors duration-300">
-          <button onClick={toggleTheme} className="fixed top-6 right-6 w-12 h-12 bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 z-50 cursor-pointer">
+          <button onClick={toggleTheme} className="fixed top-6 right-6 w-12 h-12 bg-white/30 dark:text-blue-500 dark:bg-blue-500/10 backdrop-blur-lg rounded-full flex items-center justify-center text-gray-600 z-50 cursor-pointer">
             {isDarkMode ? <SunIcon /> : <MoonIcon />}
           </button>
           <HomeSection portfolioData={portfolioData} />

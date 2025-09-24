@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const SkillSection = ({ portfolioData }) => (
     <Section id="skills" title={portfolioData.skills.title}>
-        <ContentCard className="bg-white dark:bg-gray-800 ">
+        <ContentCard className="bg-white dark:bg-gray-800 my-4">
             <div className="flex flex-wrap justify-center gap-4">
                 {portfolioData.skills.list.map((brand, index) => (
                     <motion.div
