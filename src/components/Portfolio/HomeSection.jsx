@@ -36,21 +36,20 @@ const HomeSection = ({ portfolioData }) => (
                 >
                     {portfolioData.tagline}
                 </motion.p>
-                {/* <p className="md:text-xl text-black dark:text-gray-400 font-medium m-0"
-                >with</p>
+
                 <ReactTyped
                     strings={portfolioData.textTypes}
                     typeSpeed={60}
                     backSpeed={40}
                     loop
-                    className="text-lg md:text-xl text-black-700 dark:text-indigo-500 font-semibold mb-10"
-                /> */}
+                    className="text-lg md:text-xl text-black-700 dark:text-white-500 font-semibold mb-10"
+                />
 
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 1 }}
-                    className="flex justify-center m-0"
+                    className="flex justify-center m-0 mt-4"
                 >
                     <div className="flex size-10 animate-bounce items-center justify-center rounded-full p-2 ring-2 ring-black dark:ring-white bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg rounded-3xl z-50 m-0">
                         <svg
@@ -69,43 +68,15 @@ const HomeSection = ({ portfolioData }) => (
 
                 <a
                     href={`mailto:${portfolioData.contact.email}`}
-                    className="group inline-flex items-center px-6 py-3 rounded-full text-white font-bold bg-black 
+                    className="group w-50 inline-flex items-center justify-center px-6 py-3 rounded-full text-white font-bold bg-black 
                     dark:border dark:border-white-500/10 dark:bg-gray-800 
                     dark:hover:outline-white duration-300"
                 >
                     <span className="text-xl group-hover:hidden">Contact Me</span>
-
                     <span className="text-xl hidden group-hover:inline">Let’s Talk</span>
                 </a>
 
             </ContentCard>
-
-            {/* <div className="grid md:grid-flow-col md:grid-cols-4 grid-cols-2 gap-4">
-                {portfolioData.social.map((social, index) => {
-                    const Logo = social.logo; // alias for clarity
-
-                    return (
-                        <a href={social.link} target="_blank" key={index}>
-                            <ContentCard
-                                className="bg-white text-center dark:text-blue-500 dark:bg-gray-800 flex flex-row items-center justify-center gap-2 m-0"
-                                whileHover={{ scale: 1.05 }}
-                            >
-                                {typeof Logo === "string" ? (
-                                    <img
-                                        src={Logo}
-                                        alt={social.name}
-                                        className="w-10 h-10 object-contain"
-                                    />
-                                ) : (
-                                    <Logo className="w-10 h-10" />
-                                )}
-                                <p>{social.name}</p>
-                            </ContentCard>
-                        </a>
-                    );
-                })}
-
-            </div> */}
             <SocialButton />
         </div >
     </Section >

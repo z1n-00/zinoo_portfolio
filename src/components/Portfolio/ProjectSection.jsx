@@ -8,22 +8,17 @@ const ProjectSection = ({ portfolioData }) => (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-4">
             {portfolioData.projects.list.map((project, index) => (
                 <ContentCard key={index} className="flex flex-col bg-white dark:bg-gray-800 dark:border-0 items-start text-left">
-                    <h3 className="text-2xl font-semibold text-gray-800 mb-2">{project.title}</h3>
+                    <div className="flex flex-row g-4">
+                        <img className="md:w-15 md:h-15 w-10 h-10 basis-[30%] object-contain" src={project.logo} />
+                        <h3 className="text-2xl font-semibold text-gray-800 mb-2 basis-[70%]">{project.title}</h3>
+                    </div>
                     <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
                     <div className="mt-auto pt-4 w-full">
-                        {/* <span className="text-sm font-light text-gray-500 block mb-2">{project.technologies}</span>
-                        <a href={project.link} className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-300 font-semibold">
+                        <span className="text-sm font-light text-gray-500 block mb-2">{project.technologies}</span>
+                        <a href={project.link} className="inline-flex items-center text-black-600 hover:text-black-800 transition-colors duration-300 font-semibold">
                             View Project
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right ml-2"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                        </a> */}
-                        <motion.button
-                            whileHover={{ scale: 1.1, backgroundColor: "#6366F1", color: "#fff" }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-6 py-2 rounded-lg border border-indigo-500"
-                        >
-                            View Project
-                        </motion.button>
-
+                        </a>
                     </div>
                 </ContentCard>
             ))}

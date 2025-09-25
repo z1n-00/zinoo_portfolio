@@ -13,8 +13,8 @@ const SocialButton = () => (
                        flex flex-row items-center justify-center gap-2 m-0"
                         whileHover={{ scale: 1.05 }}
                     >
-                        <div className="flex flex-row gap-4 m-0">
-                            <span className="group-hover:hidden">
+                        <div className="flex flex-row gap-4">
+                            <span className="group-hover:hidden text-black dark:text-gray-400">
                                 {typeof Logo === "string" ? (
                                     <img
                                         src={Logo}
@@ -27,11 +27,11 @@ const SocialButton = () => (
                             </span>
 
                             <span className="hidden group-hover:inline">
-                                <RightArrowIcon className="text-black dark:text-white" />
+                                <RightArrowIcon className="text-black dark:text-gray-400" />
                             </span>
 
-                            <p className="group-hover:hidden">{social.name}</p>
-                            <p className="hidden group-hover:inline">Visit Link</p>
+                            <p className="group-hover:hidden text-black dark:text-gray-400">{social.name}</p>
+                            <p className="hidden group-hover:inline text-black dark:text-gray-400">Visit Link</p>
                         </div>
                     </ContentCard>
                 </a>
