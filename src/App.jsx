@@ -55,7 +55,7 @@ const App = () => {
           <ExperienceSection portfolioData={portfolioData} />
           <BrandSection portfolioData={portfolioData} />
           <ProjectSection portfolioData={portfolioData} />
-          {/* <SkillSection portfolioData={portfolioData} /> */}
+          <SkillSection portfolioData={portfolioData} />
           <ContactSection portfolioData={portfolioData} />
         </main>
       </div>

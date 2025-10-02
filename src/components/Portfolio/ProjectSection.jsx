@@ -98,8 +98,6 @@ const ProjectSection = ({ portfolioData }) => {
                         </button>
                     </div>
                 )}
-
-                <SkillSection portfolioData={portfolioData} />
             </Section>
         </>
     );

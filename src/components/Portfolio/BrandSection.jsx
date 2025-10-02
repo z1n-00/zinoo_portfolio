@@ -10,7 +10,7 @@ const BrandSection = ({ portfolioData }) => (
                 {portfolioData.brands.map((brand, index) => (
                     <motion.div
                         key={index}
-                        className="flex items-center justify-center w-32 h-32 p-4 hover:scale-120 duration-150 cursor-pointer"
+                        className="flex items-center justify-center w-32 h-32 p-4 hover:scale-120 duration-300 cursor-pointer"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
