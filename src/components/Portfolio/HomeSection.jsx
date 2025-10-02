@@ -12,7 +12,7 @@ const HomeSection = ({ portfolioData }) => (
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="flex justify-center m-0"
+                    className="flex justify-center my-8"
                 >
                     <img
                         src={portfolioData.profile ?? "https://placehold.co/128x128/a0aec0/ffffff?text=ZO"}

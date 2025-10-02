@@ -52,10 +52,10 @@ const App = () => {
           <HomeSection portfolioData={portfolioData} />
           {/* <AboutSection portfolioData={portfolioData} /> */}
           <EducationSection portfolioData={portfolioData} />
-          <ExperienceSection experienceData={portfolioData.experience} />
+          <ExperienceSection portfolioData={portfolioData} />
           <BrandSection portfolioData={portfolioData} />
           <ProjectSection portfolioData={portfolioData} />
-          <SkillSection portfolioData={portfolioData} />
+          {/* <SkillSection portfolioData={portfolioData} /> */}
           <ContactSection portfolioData={portfolioData} />
         </main>
       </div>

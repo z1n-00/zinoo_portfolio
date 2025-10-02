@@ -16,8 +16,8 @@ const Navigation = ({ activeSection, scrollToSection }) => (
                 {/* <NavButton sectionId="about" activeSection={activeSection} onClick={scrollToSection} label="About"><UserIcon /></NavButton> */}
                 <NavButton sectionId="education" activeSection={activeSection} onClick={scrollToSection} label="Education"><BookOpenIcon /></NavButton>
                 <NavButton sectionId="experience" activeSection={activeSection} onClick={scrollToSection} label="Experience"><BriefcaseIcon /></NavButton>
-                {/* <NavButton sectionId="projects" activeSection={activeSection} onClick={scrollToSection} label="Projects"><BriefcaseIcon /></NavButton> */}
-                <NavButton sectionId="skills" activeSection={activeSection} onClick={scrollToSection} label="Skills"><SkillIcon /></NavButton>
+                <NavButton sectionId="projects" activeSection={activeSection} onClick={scrollToSection} label="Projects"><SkillIcon /></NavButton>
+                {/* <NavButton sectionId="skills" activeSection={activeSection} onClick={scrollToSection} label="Skills"><SkillIcon /></NavButton> */}
                 <NavButton sectionId="contact" activeSection={activeSection} onClick={scrollToSection} label="Contact"><MailIcon /></NavButton>
             </NavCard>
         </motion.div>

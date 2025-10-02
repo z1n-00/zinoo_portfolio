@@ -1,13 +1,13 @@
 import Section from "../Layout/Section";
 import ContentCard from "../Layout/ContentCard";
 
-const ExperienceSection = ({ experienceData }) => (
+const ExperienceSection = ({ portfolioData }) => (
     <Section id="experience" className="mb-12">
         <h4 className="text-3xl md:text-5xl font-bold text-gray-800 dark:text-gray-300">
             Experience
         </h4>
         <div className="grid grid-flow-row gap-4 my-4">
-            {experienceData.map((experience, index) => (
+            {portfolioData.experience.map((experience, index) => (
                 <ContentCard key={index} className="bg-white dark:bg-gray-800 flex flex-col items-start text-left">
                     <div className="flex md:flex-row flex-col gap-4">
                         <div className="basis-[30%]">
