@@ -1,8 +1,8 @@
-import profile from './../assets/images/profile.jpg';
+// import profile from './../assets/images/profile.jpg';
 
 const portfolioData = {
     name: "Zin Oo",
-    profile,
+    // profile,
     tagline: "I build beautiful and functional web applications.",
     textTypes: ["Back-end Developer", "Full-stack Developer", "Software Engineer"],
     about: {

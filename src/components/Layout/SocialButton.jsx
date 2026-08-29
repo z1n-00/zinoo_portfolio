@@ -4,7 +4,7 @@ import { RightArrowIcon } from "../Icons";
 
 const SocialButton = () => (
     <div className="grid md:grid-flow-col md:grid-cols-4 grid-cols-2 gap-4">
-        {portfolioData.social.map((social, index) => {
+        {portfolioData.social?.map((social, index) => {
             const Logo = social.logo;
             return (
                 <a href={social.link} target="_blank" key={index} className="group">

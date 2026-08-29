@@ -15,7 +15,7 @@ const HomeSection = ({ portfolioData }) => (
                     className="flex justify-center my-8"
                 >
                     <img
-                        src={portfolioData.profile ?? "https://placehold.co/128x128/a0aec0/ffffff?text=ZO"}
+                        src={portfolioData.profile ?? "https://placehold.co/128x128/111828/ffffff?text=ZO"}
                         alt="Profile" className="w-32 h-32 rounded-full border-2 border-white/50 dark:border-white mb-6" />
                 </motion.div>
 
