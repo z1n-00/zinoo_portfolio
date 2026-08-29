@@ -3,7 +3,7 @@ import ContentCard from "../Layout/ContentCard";
 
 const ExperienceSection = ({ portfolioData }) => (
     <Section id="experience" className="mb-12">
-        <h4 className="text-3xl md:text-5xl font-bold text-gray-800 dark:text-gray-300">
+        <h4 className="text-2xl md:text-4xl font-bold text-gray-800 dark:text-gray-300">
             Experience
         </h4>
         <div className="grid grid-flow-row gap-4 my-4">

@@ -25,7 +25,7 @@ const HomeSection = ({ portfolioData }) => (
                     transition={{ duration: 1, delay: 0.3 }}
                     className="text-2xl md:text-4xl font-bold text-gray-800 dark:text-gray-300 mb-2"
                 >
-                    {`Hi, I'm ${portfolioData.name}`}
+                    {`I'm ${portfolioData.name}`}
                 </motion.h4>
 
                 <motion.p
