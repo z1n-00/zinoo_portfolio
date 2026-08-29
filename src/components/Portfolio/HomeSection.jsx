@@ -16,7 +16,7 @@ const HomeSection = ({ portfolioData }) => (
                 >
                     <img
                         src={portfolioData.profile ?? "https://placehold.co/128x128/111828/ffffff?text=ZO"}
-                        alt="Profile" className="w-32 h-32 rounded-full border-2 border-white/50 dark:border-white mb-6" />
+                        alt="Profile" className="md:w-32 md:h-32 w-20 h-20 rounded-full border-2 border-white/50 dark:border-white mb-6" />
                 </motion.div>
 
                 <motion.h4

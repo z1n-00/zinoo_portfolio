@@ -22,7 +22,7 @@ const SocialButton = () => (
                                         className="w-10 h-10 object-contain"
                                     />
                                 ) : (
-                                    <Logo className="w-10 h-10" />
+                                    <Logo className="w-8 h-8" />
                                 )}
                             </span>
 

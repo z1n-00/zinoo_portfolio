@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
 import portfolioData from "./data/portfolioData";
 import Navigation from "./components/Layout/Navigation";
 import HomeSection from "./components/Portfolio/HomeSection";
@@ -9,6 +10,8 @@ import ProjectSection from "./components/Portfolio/ProjectSection";
 import SkillSection from "./components/Portfolio/SkillSection";
 import ContactSection from "./components/Portfolio/ContactSection";
 import { MoonIcon, SunIcon } from "./components/Icons";
+import { GiMoonBats,  GiStripedSun} from "react-icons/gi";
+import { SiMoonshotai } from "react-icons/si";
 import BrandSection from "./components/Portfolio/BrandSection";
 
 const App = () => {
@@ -47,7 +50,7 @@ const App = () => {
         <Navigation activeSection={activeSection} scrollToSection={scrollToSection} />
         <main className="relative z-10 bg-[#EEEEF2] dark:bg-gray-900 transition-colors duration-300">
           <button onClick={toggleTheme} className="fixed top-6 right-6 w-12 h-12 bg-white/30 dark:text-white dark:bg-gray-800 backdrop-blur-lg rounded-full flex items-center justify-center text-gray-600 z-50 cursor-pointer">
-            {isDarkMode ? <SunIcon /> : <MoonIcon />}
+            {isDarkMode ? <GiMoonBats /> : <GiStripedSun />}
           </button>
           <HomeSection portfolioData={portfolioData} />
           {/* <AboutSection portfolioData={portfolioData} /> */}
