@@ -53,7 +53,6 @@ const App = () => {
             {isDarkMode ? <GiMoonBats /> : <GiStripedSun />}
           </button>
           <HomeSection portfolioData={portfolioData} />
-          {/* <AboutSection portfolioData={portfolioData} /> */}
           <EducationSection portfolioData={portfolioData} />
           <ExperienceSection portfolioData={portfolioData} />
           <BrandSection portfolioData={portfolioData} />
