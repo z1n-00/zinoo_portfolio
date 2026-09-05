@@ -3,20 +3,19 @@ import "./App.css";
 import portfolioData from "./data/portfolioData";
 import Navigation from "./components/Layout/Navigation";
 import HomeSection from "./components/Portfolio/HomeSection";
-import AboutSection from "./components/Portfolio/AboutSection";
 import EducationSection from "./components/Portfolio/EducationSection";
 import ExperienceSection from "./components/Portfolio/ExperienceSection";
 import ProjectSection from "./components/Portfolio/ProjectSection";
 import SkillSection from "./components/Portfolio/SkillSection";
 import ContactSection from "./components/Portfolio/ContactSection";
-import { MoonIcon, SunIcon } from "./components/Icons";
-import { GiMoonBats,  GiStripedSun} from "react-icons/gi";
-import { SiMoonshotai } from "react-icons/si";
+import { GiMoonBats, GiStripedSun } from "react-icons/gi";
 import BrandSection from "./components/Portfolio/BrandSection";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState("home");
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -24,34 +23,83 @@ const App = () => {
   };
 
   useEffect(() => {
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
+
+  useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "education", "experience", "projects", "skills", "contact"];
+      const sections = [
+        "home",
+        "about",
+        "education",
+        "experience",
+        "projects",
+        "skills",
+        "contact",
+      ];
+
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       let currentSection = "home";
+
       for (const sectionId of sections) {
         const section = document.getElementById(sectionId);
+
         if (section && section.offsetTop <= scrollPosition) {
           currentSection = sectionId;
         }
       }
+
       setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleTheme = () => setIsDarkMode(!isDarkMode);
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => !prev);
+  };
 
   return (
-    <div className={isDarkMode ? 'dark' : ''}>
+    <div className={isDarkMode ? "dark" : ""}>
       <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300">
-        <Navigation activeSection={activeSection} scrollToSection={scrollToSection} />
+        <Navigation
+          activeSection={activeSection}
+          scrollToSection={scrollToSection}
+        />
+
         <main className="relative z-10 bg-[#EEEEF2] dark:bg-gray-900 transition-colors duration-300">
-          <button onClick={toggleTheme} className="fixed top-6 right-6 w-12 h-12 bg-white/30 dark:text-white dark:bg-gray-800 backdrop-blur-lg rounded-full flex items-center justify-center text-gray-600 z-50 cursor-pointer">
+          <button
+            onClick={toggleTheme}     
+            className={`
+              fixed top-6 right-6 w-12 h-12
+              backdrop-blur-lg rounded-full
+              flex items-center justify-center
+              z-50 cursor-pointer
+              border
+              transition-all duration-300
+
+              ${isDarkMode
+                ? `
+                    bg-gray-800/70
+                    text-white
+                    border-0
+                    hover:text-green-400
+                  `
+                : `
+                    bg-white/30
+                    text-gray-600
+                    border-0
+                    hover:text-orange-500
+                  `
+              }
+            `}
+          >
             {isDarkMode ? <GiMoonBats /> : <GiStripedSun />}
           </button>
+
           <HomeSection portfolioData={portfolioData} />
           <EducationSection portfolioData={portfolioData} />
           <ExperienceSection portfolioData={portfolioData} />
