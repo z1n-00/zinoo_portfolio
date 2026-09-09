@@ -11,6 +11,12 @@
 :root {
     --color-light: #EEEEF2;
     --color-white: #FFFFFF;
+    --color-dark: #101828;
+    --color-theme: var(--color-light);
+}
+
+:root[data-theme="dark"] {
+    --color-theme: var(--color-dark);
 }
 
 html {
@@ -19,8 +25,7 @@ html {
 
 body {
     font-family: 'SpaceGrotesk', sans-serif;
-    background: #EEEEF2;
-    /* Use custom font */
+    background: var(--color-theme);
 }
 
 ::-webkit-scrollbar {

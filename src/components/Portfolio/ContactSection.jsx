@@ -10,7 +10,7 @@ const ContactSection = ({ portfolioData }) => (
                 {portfolioData.contact.description}
             </p>
             <a href={`mailto:${portfolioData.contact.email}`} className="md:text-3xl underline underline-offset-1 text-white dark:text-gray-400 font-bold hover:text-gray-700 transition-all duration-300">
-                <span>zinoo.netdev@gmail.com</span>
+                <span>{portfolioData.contact.email}</span>
             </a>
             <p className="md:text-start text-sm dark:text-gray-300 text-white mt-12">©2025 - All rights reserved</p>
         </ContentCard>

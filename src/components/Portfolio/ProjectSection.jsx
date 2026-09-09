@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import Section from "../Layout/Section";
 import ContentCard from "../Layout/ContentCard";
-import { RightArrowIcon } from "../Icons";
-import SkillSection from "./SkillSection";
 
 const ProjectSection = ({ portfolioData }) => {
     const initialCount = 3;
@@ -80,7 +78,6 @@ const ProjectSection = ({ portfolioData }) => {
                                     )}
 
                                     <p className="text-black dark:text-gray-500 mb-2">{project.description}</p>
-                                    {/* <p className="text-black dark:text-gray-500">{project.technologies}</p> */}
                                 </div>
                             </div>
                         </ContentCard>

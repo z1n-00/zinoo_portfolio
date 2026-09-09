@@ -23,7 +23,24 @@ const App = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    const theme = isDarkMode ? "dark" : "light";
+
+    document.documentElement.dataset.theme = theme;
+    const themeColor = getComputedStyle(document.documentElement)
+      .getPropertyValue("--color-theme")
+      .trim();
+
+    localStorage.setItem("theme", theme);
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", themeColor);
+    document
+      .querySelector('meta[name="msapplication-TileColor"]')
+      ?.setAttribute("content", themeColor);
+    document
+      .querySelector('meta[name="apple-mobile-web-app-status-bar-style"]')
+      ?.setAttribute("content", isDarkMode ? "black-translucent" : "default");
+    document.documentElement.style.backgroundColor = themeColor;
   }, [isDarkMode]);
 
   useEffect(() => {
@@ -64,13 +81,13 @@ const App = () => {
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
-      <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300">
+      <div className="bg-[var(--color-theme)] text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300">
         <Navigation
           activeSection={activeSection}
           scrollToSection={scrollToSection}
         />
 
-        <main className="relative z-10 bg-[#EEEEF2] dark:bg-gray-900 transition-colors duration-300">
+        <main className="relative z-10 bg-[var(--color-theme)] transition-colors duration-300">
           <button
             onClick={toggleTheme}     
             className={`
