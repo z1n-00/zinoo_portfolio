@@ -81,13 +81,13 @@ const App = () => {
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
-      <div className="bg-[var(--color-theme)] text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300">
+       <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300">
         <Navigation
           activeSection={activeSection}
           scrollToSection={scrollToSection}
         />
 
-        <main className="relative z-10 bg-[var(--color-theme)] transition-colors duration-300">
+        <main className="relative z-10 bg-[var(--color-light)] dark:bg-gray-900 transition-colors duration-300">
           <button
             onClick={toggleTheme}     
             className={`

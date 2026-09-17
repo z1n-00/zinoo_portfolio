@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <!-- Theme / Status Bar Colors -->
   <!-- Android Chrome -->
-  <meta name="theme-color" content="#EEEEF2">
+  <meta name="theme-color" content="[var(--color-gray)]">
 
   <!-- iOS Safari -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -14,7 +14,7 @@
   <script>
     (() => {
       const isDarkMode = localStorage.getItem("theme") === "dark";
-      const themeColor = isDarkMode ? "#101828" : "#EEEEF2";
+      const themeColor = isDarkMode ? "var(--color-dark)" : "var(--color-gray)";
 
       document.documentElement.dataset.theme = isDarkMode ? "dark" : "light";
       document

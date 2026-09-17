@@ -12,7 +12,9 @@
     --color-light: #EEEEF2;
     --color-white: #FFFFFF;
     --color-dark: #101828;
-    --color-theme: var(--color-light);
+    --color-black: #000000;
+    --color-gray: #333333;
+    --color-theme: var(--color-gray);
 }
 
 :root[data-theme="dark"] {
