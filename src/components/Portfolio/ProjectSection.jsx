@@ -33,7 +33,7 @@ const ProjectSection = ({ portfolioData }) => {
                     {projectsToShow.map((project, index) => (
                         <ContentCard
                             key={index}
-                            className="bg-white dark:bg-gray-800 flex flex-col items-start text-left transition-opacity duration-500 ease-in-out"
+                            className="bg-white dark:bg-[var(--color-black)] flex flex-col items-start text-left transition-opacity duration-500 ease-in-out"
                         >
                             <div className="flex md:flex-row flex-col gap-4 ">
                                 <div className="basis-[30%]">
@@ -87,7 +87,7 @@ const ProjectSection = ({ portfolioData }) => {
                     <div className="flex justify-center mt-4">
                         <button
                             className="group w-50 inline-flex items-center justify-center px-6 py-3 rounded-full text-white font-bold bg-black 
-                    dark:border dark:border-white-500/10 dark:bg-gray-800 
+                    dark:border dark:border-white-500/10 dark:bg-[var(--color-black)] 
                     dark:hover:outline-white duration-300 cursor-pointer hover:scale-105"
                             onClick={() => setShowAll(true)}
                         >

@@ -8,7 +8,7 @@ const ExperienceSection = ({ portfolioData }) => (
         </h4>
         <div className="grid grid-flow-row gap-4 my-4">
             {portfolioData.experience.map((experience, index) => (
-                <ContentCard key={index} className="bg-white dark:bg-gray-800 flex flex-col items-start text-left">
+                <ContentCard key={index} className="bg-white dark:bg-[var(--color-black)] flex flex-col items-start text-left">
                     <div className="flex md:flex-row flex-col gap-4">
                         <div className="basis-[30%]">
                             <p className="text-black md:text-xl text-black dark:text-gray-400 font-semibold mb-2">{experience.company}</p>

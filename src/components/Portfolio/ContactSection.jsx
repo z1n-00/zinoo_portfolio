@@ -4,8 +4,8 @@ import SocialButton from "../Layout/SocialButton";
 
 const ContactSection = ({ portfolioData }) => (
     <Section id="contact" title={portfolioData.contact.title}>
-        <ContentCard className="bg-black dark:bg-gray-800 my-4 py-8 text-wrap">
-            <h4 className="md:text-6xl text-4xl text-white dark:text-gray-400 dark:bg-gray-800 font-bold text-balance">Ready to collaborate?</h4>
+        <ContentCard className="bg-black dark:bg-[var(--color-black)] my-4 py-8 text-wrap">
+            <h4 className="md:text-6xl text-4xl text-white dark:text-gray-400 dark:bg-[var(--color-black)] font-bold text-balance">Ready to collaborate?</h4>
             <p className="text-white dark:text-gray-500 text-l/g md:text-xl mb-6 text-wrap">
                 {portfolioData.contact.description}
             </p>

@@ -3,7 +3,7 @@ const NavButton = ({ sectionId, activeSection, onClick, children, label }) => (
         <button
             onClick={() => onClick(sectionId)}
             aria-label={label}
-            className={`group relative w-12 h-12 flex shrink-0 flex-col items-center justify-center rounded-full duration-300 cursor-pointer hover:scale-100 md:h-12 md:w-12 ${activeSection === sectionId ? 'w-26 h-12 dark:bg-gray-800/30 bg-black dark:bg-none dark:border darK:border-white-500/10 text-white' : 'hover:text-black hover:dark:text-gray-500 hover:bg-gray-500/10 text-black dark:text-white hover:text-gray-500 dark:hover:text-white'}`}
+            className={`group relative w-12 h-12 gap-1 flex shrink-0 flex-col items-center justify-center rounded-full duration-300 cursor-pointer hover:scale-100 md:h-12 md:w-12 ${activeSection === sectionId ? 'w-30 h-12 dark:bg-[var(--color-black)]/30 bg-black dark:bg-none dark:border darK:border-white-500/10 text-white' : 'hover:text-black hover:dark:text-gray-500 hover:bg-gray-500/10 text-black dark:text-white hover:text-gray-500 dark:hover:text-white'}`}
         >
             <div>
                 {children}

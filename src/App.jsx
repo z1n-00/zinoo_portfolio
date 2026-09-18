@@ -87,7 +87,7 @@ const App = () => {
           scrollToSection={scrollToSection}
         />
 
-        <main className="relative z-10 bg-[var(--color-light)] dark:bg-gray-900 transition-colors duration-300">
+        <main className="relative z-10 bg-[var(--color-light)] dark:bg-[var(--color-darker)] transition-colors duration-300">
           <button
             onClick={toggleTheme}     
             className={`

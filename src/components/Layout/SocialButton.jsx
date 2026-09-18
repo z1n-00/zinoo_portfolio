@@ -9,7 +9,7 @@ const SocialButton = () => (
             return (
                 <a href={social.link} target="_blank" key={index} className="group">
                     <ContentCard
-                        className="bg-white text-center dark:text-blue-500 dark:bg-gray-800 
+                        className="bg-white text-center dark:text-blue-500 dark:bg-[var(--color-black)] 
                        flex flex-row items-center justify-center gap-2 m-0"
                         whileHover={{ scale: 1.05 }}
                     >

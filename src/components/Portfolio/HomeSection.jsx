@@ -7,7 +7,7 @@ import { ReactTyped } from "react-typed";
 const HomeSection = ({ portfolioData }) => (
     <Section id="home" className="flex flex-col items-center justify-center text-center relative">
         <div className="flex flex-col gap-4 mb-4">
-            <ContentCard className="bg-white dark:bg-gray-800 ">
+            <ContentCard className="bg-white dark:bg-[var(--color-black)] ">
                 <motion.div
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -51,7 +51,7 @@ const HomeSection = ({ portfolioData }) => (
                     transition={{ delay: 1, duration: 1 }}
                     className="flex justify-center m-0 mt-4"
                 >
-                    <div className="flex size-10 animate-bounce items-center justify-center rounded-full p-2 ring-2 ring-black dark:ring-white bg-white/30 dark:bg-gray-800/30 backdrop-blur-lg rounded-3xl z-50 m-0">
+                    <div className="flex size-10 animate-bounce items-center justify-center rounded-full p-2 ring-2 ring-black dark:ring-white bg-white/30 dark:bg-[var(--color-black)]/30 backdrop-blur-lg rounded-3xl z-50 m-0">
                         <svg
                             className="size-6 dark:text-white text-black"
                             fill="none"
@@ -69,7 +69,7 @@ const HomeSection = ({ portfolioData }) => (
                 <a
                     href={`mailto:${portfolioData.contact.email}`}
                     className="group w-50 inline-flex items-center justify-center px-6 py-3 rounded-full text-white font-bold bg-black 
-                    dark:border dark:border-white-500/10 dark:bg-gray-800 
+                    dark:border dark:border-white-500/10 dark:bg-[var(--color-black)] 
                     dark:hover:outline-white duration-300"
                 >
                     <span className="text-xl group-hover:hidden">Contact Me</span>

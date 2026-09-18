@@ -12,13 +12,14 @@
     --color-light: #EEEEF2;
     --color-white: #FFFFFF;
     --color-dark: #101828;
-    --color-black: #000000;
+    --color-darker: #030303;
     --color-gray: #333333;
+    --color-black: #0F0F0F;
     --color-theme: var(--color-gray);
 }
 
 :root[data-theme="dark"] {
-    --color-theme: var(--color-dark);
+    --color-theme: var(--color-black);
 }
 
 html {
