@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { IoHomeOutline, IoMailOpenOutline, IoBriefcaseOutline, IoBookOutline, IoFolderOpenOutline } from "react-icons/io5";
 
 const Navigation = ({ activeSection, scrollToSection }) => (
-    <nav className="fixed bottom-4 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 z-50 p-2 md:p-0">
+    <nav className="fixed bottom-2 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0 z-50 p-2 md:p-0">
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
