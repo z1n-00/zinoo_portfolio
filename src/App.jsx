@@ -92,7 +92,7 @@ const App = () => {
             onClick={toggleTheme}     
             className={`
               fixed top-6 right-6 w-12 h-12
-              backdrop-blur-lg rounded-full
+              rounded-full
               flex items-center justify-center
               z-50 cursor-pointer
               border
@@ -100,13 +100,11 @@ const App = () => {
 
               ${isDarkMode
                 ? `
-                    bg-gray-800/70
                     text-white
                     border-0
                     hover:text-green-400
                   `
                 : `
-                    bg-white/30
                     text-gray-600
                     border-0
                     hover:text-orange-500
